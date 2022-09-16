@@ -1,0 +1,19 @@
+// A temporary file that contains instructions to be followed by a computer.
+
+DECLARE arrayLength:INTERGER
+DECLARE arr : ARRAY[0:arrayLength] OF INTEGER
+
+PROCEDURE BubbleSort 
+    DECLARE Swap:BOOLEAN
+    DECLARE Sorted:INTEGER
+    Sorted <- 1
+    REPEAT
+        Swap <- False
+        FOR pos <- 0 TO (arrayLength - Sorted)
+            IF arr[pos] > arr[pos+1] THEN swap(arr[pos], arr[pos+1]) ENDIF
+            Swap <- TRUE
+        Sorted <- Sorted + 1
+    UNTIL Swap = False
+ENDPROCEDURE
+
+CALL BubbleSort
